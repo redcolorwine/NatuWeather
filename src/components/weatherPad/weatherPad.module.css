@@ -8,14 +8,22 @@
 }
 
 .inputPad input{
-    display: block;
+    display: inline;
     outline: none;
     background-color: rgb(255, 255, 255);
+    color:rgb(36, 93, 104);
+    font-weight: 800;
+    font-size: 13pt;
+    font-family: consolas;
     border-radius: 8px;
     margin-top: 4px;
+    height: 25px;
 }
 .inputPad input:focus{
     box-shadow: 0 0 10px rgb(2, 67, 85);
+    color:rgb(36, 93, 104);
+    font-weight: 800;
+    font-family: consolas;
 }
 .inputPad input::placeholder{
    color:rgb(2, 67, 85);
@@ -27,7 +35,19 @@
 .weather{
 
 }
-
+.weatherText{
+    color:rgb(36, 93, 104);
+    font-family: consolas;
+}
+.inputPad button{
+    color:rgb(36, 93, 104);
+    background-color: white;
+    font-family: consolas;
+    font-size: 13pt;
+    font-weight: 900;
+    border-radius: 5px;
+    
+}
 .weather img{
 width: 90px;
 height: 90px;

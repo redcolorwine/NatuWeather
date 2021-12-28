@@ -3,13 +3,14 @@ import Footer from './components/footer/footer';
 import Header from './components/header/header';
 import Maps from './components/maps/maps';
 import WeatherPad from './components/weatherPad/weatherPad';
+import WeatherPadContainer from './components/weatherPad/weatherPadContainer';
 
 function App() {
   return (
     <div className='App'>
       <Header />
       <div className="App-wrapper">
-        <WeatherPad />
+        <WeatherPadContainer />
         <Maps/>
       </div>
       <Footer/>
