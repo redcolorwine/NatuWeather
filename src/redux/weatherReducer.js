@@ -1,13 +1,13 @@
 let initialState = {
-    city: 'Amursk',
-    temp: -30,
-    feels_like: -50,
+    city: '',
+    temp: -null,
+    feels_like: -null,
     wind: {
-        speed: 1.5,
-        deg: 350,
-        gust: 1.37
+        speed: null,
+        deg: null,
+        gust: null
     },
-    description: "clear sky",
+    description: "",
     weatherIcon: "https://openweathermap.org/img/wn/02d@2x.png"
 }
 
