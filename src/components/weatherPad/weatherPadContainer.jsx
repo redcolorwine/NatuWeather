@@ -1,5 +1,5 @@
 import { connect } from "react-redux"
-import { getCityWeather, setCityWeather } from "../../redux/weatherReducer"
+import { getCityWeather, setCityWeather, setListWeather } from "../../redux/weatherReducer"
 import WeatherPad from "./weatherPad"
 
 const mapStateToProps=(state)=>{
@@ -9,7 +9,8 @@ const mapStateToProps=(state)=>{
         feels_like:state.weatherPage.feels_like,
         wind:state.weatherPage.wind,
         description:state.weatherPage.description,
-        weatherIcon:state.weatherPage.weatherIcon
+        weatherIcon:state.weatherPage.weatherIcon,
+        listWeather:state.weatherPage.listWeather
 
     }
 }
@@ -17,7 +18,10 @@ const mapStateToProps=(state)=>{
 const mapDispatchToProps=(dispatch)=>{
     return{
         getCityWeather:(city)=>{dispatch(getCityWeather(city))},
-        setCityWeather:(city, temp, feels_like, wind, description,weatherIcon)=>{dispatch(setCityWeather(city, temp, feels_like, wind, description,weatherIcon))}
+        setCityWeather:(city, temp, feels_like, wind, description,weatherIcon)=>{dispatch(setCityWeather(city, temp, feels_like, wind, description,weatherIcon))},
+        setListWeather:(listWeather)=>{
+            dispatch(setListWeather(listWeather))
+        }
     }
 }
 
