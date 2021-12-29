@@ -8,7 +8,8 @@ let initialState = {
         gust: null
     },
     description: "",
-    weatherIcon: "https://openweathermap.org/img/wn/02d@2x.png"
+    weatherIcon: "https://openweathermap.org/img/wn/02d@2x.png",
+    listWeather: []
 }
 
 
@@ -30,6 +31,11 @@ const weatherReducer = (state = initialState, action) => {
                 description:action.description,
                 weatherIcon:action.weatherIcon
             }
+            case 'SET_LIST_WEATHER':
+            return {
+                ...state,
+                listWeather:[...state.listWeather,action.listWeather]
+            }
         default: return state;
     }
 
@@ -43,5 +49,8 @@ export const getCityWeather = (city) => {
 export const setCityWeather = (city,temp, feels_like, wind, description, weatherIcon) => {
     return { type: 'SET_CITY_WEATHER', city,temp, feels_like, wind, description, weatherIcon }
 
+}
+export const setListWeather=(listWeather)=>{
+    return{type:'SET_LIST_WEATHER',listWeather}
 }
 export default weatherReducer;

@@ -11,7 +11,7 @@ function App() {
       <Header />
       <div className="App-wrapper">
         <WeatherPadContainer />
-        <Maps/>
+        
       </div>
       <Footer/>
     </div>
