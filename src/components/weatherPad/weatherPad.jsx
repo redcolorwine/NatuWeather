@@ -3,7 +3,6 @@ import sunImg from '../../media/images/sun.png'
 import * as axios from 'axios';
 import React from 'react';
 import WeatherNext from './weatherNext/weatherNext';
-import forestvideo from '../../media/images/forest.mp4';
 const WeatherPad = (props) => {
     let cityRef = React.createRef();
     let APIkey = '71236dc5b01d30f870ee8474c75a3180';
